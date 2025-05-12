@@ -1,0 +1,260 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: beige;
+}
+
+.head-container{
+    background: url(
+    ../img/wllppProfile.JPG
+    );
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background: rgb(44, 44, 44); */
+    background: rgba(0, 0, 0, 0.162);
+    height: 40px;
+    width: 100%;
+    align-items: center;
+}
+
+
+.title{
+    text-align: left;
+    margin: 0 20px;
+}
+
+div.menu{
+    text-align: right;
+    margin: 0 20px;
+}
+
+ul.menu {
+  display: none; /* Sembunyikan menu di mobile */
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  left: auto;
+  right: 0;
+  background: rgba(0, 0, 0, 0.162);
+  padding: 5px;
+  text-align: left;
+}
+
+ul.menu > a{
+    text-decoration: none;
+    color: beige;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.menu.aktif { /* Class tambahan untuk toggle JS */
+  display: flex; /* Munculkan saat tombol diklik */
+}
+
+.tombol {
+  display: block; /* Tampilkan tombol di mobile */
+}
+
+.tombol.aktif {
+  display: none;
+}
+
+.tombol:hover{
+    cursor: pointer;
+}
+
+.profile{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.prof-pict > img{
+    padding: 10px;
+    margin: 10px 0;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.prof-cont{
+    padding: 10px;
+    margin: 10px -30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.projBtn{
+    margin: 20px 0;
+}
+
+.projBtn > a{
+    text-decoration: none;
+    border: 3px solid beige;
+    border-radius: 20px;
+    color: beige;
+    padding: 10px 50px;
+}
+
+@media (max-width: 600px) {
+
+    .profile{
+    width: 100%;    
+    max-height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    }   
+
+    .prof-pict > img{ 
+        width: 80px;
+        margin: 0 20px;
+    }
+
+    prof-cont {
+        font-size: 10px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    .projBtn > a {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+.body-container{
+    padding: 30px 0;
+}
+
+.content{
+    height: auto;
+    background: white;
+    color: rgb(46, 46, 46);
+    padding: 20px 0;
+}
+
+.content > .margin{
+    margin: 0 7%;
+}
+
+.content > .margin > div{
+    padding: 20px 0;
+}
+
+.logos{
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 kolom */
+    grid-template-rows: repeat(3, 1fr); /* 2 baris */
+}
+
+.logos > a {
+    text-decoration: none;
+    color: rgb(46, 46, 46);
+    font-size: 70px;
+    padding: 10px 20px;
+}
+
+@media (max-width: 600px) {
+    .logos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+        grid-template-rows: repeat(2, 1fr); /* 2 baris */
+    }
+
+    .logos > a {
+    text-decoration: none;
+    color: rgb(46, 46, 46);
+    font-size: 50px;
+    padding: 10px;
+    }
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: bisque;
+    background-color: rgb(46, 46, 46);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer > div{
+    margin: 10px 20px;
+}
+
+/* Style Dasar */
+
+@media (max-width: 600px) {
+    .coming-soon-card{
+        left: auto;
+        width: 200px;
+          
+    }
+}
+
+.coming-soon-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: beige;
+  color: rgb(46, 46, 46);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  opacity: 0;
+  z-index: 1000;
+  transition: all 0.4s ease;
+  pointer-events: none;
+  max-width: 400px;
+}
+
+.coming-soon-card.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: auto;
+}
+
+/* Progress Bar Auto-Close */
+.progress-bar {
+  height: 5px;
+  background: linear-gradient(to right, #ff4757, #ff6b81);
+  width: 0%;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: width 3s linear;
+}
+
+/* Tombol Trigger */
+.btn {
+  padding: 12px 24px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}

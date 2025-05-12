@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Fian</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/Js/Fontawesome.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="head-container">
+        <!-- Header -->
+        <nav>
+            <div class="title">
+                <p>Portofolio Fadrik Muhammad</p>
+            </div>
+            <div class="menu">
+                <ul class="menu">
+                    <a href="#">Profile</a>
+                    <a href="#Education">Education</a>
+                    <a href="#Project">Projects</a>
+                    <a href="#sosmed">Social Media</a>
+                </ul>
+                <div class="tombol">
+                    &#9776;
+                </div>
+            </div>
+        </nav>
+
+        <!-- Isi-konten -->
+        <div class="profile">
+            <div class="prof-pict">
+                <img src="img/profile.JPG" alt="profileImg">
+            </div>
+            <dif class="prof-cont">
+                <h1>Fadrik Muhammad</h1>
+                <div class="projBtn">
+                    <a href="#Project">Lihat Project Saya</a>
+                </div>
+            </dif>
+        </div>
+    </div>
+
+    <div class="body-container">
+        <div class="content">
+            <div class="margin">
+                <div id="Education" class="edu">
+                    <h1 style="margin-bottom: 10px;">Education</h1>
+                    <h3 style="margin-left: 40px;">SMK Antartika 2 Sidoarjo - Rekayasa Perangkat Lunak (RPL)</h3>
+                    <p style="margin-left: 40px;">Lulusan TA 2024-2025</p>
+                </div>
+                <div id="Project" class="Project">
+                    <h1 style="margin-bottom: 10px;">Projects</h1>
+    
+                    <h3 style="margin-left: 40px;">HTML</h3>
+                    <p style="margin-left: 60px;">BootSrrap - Admin Inventory</p>
+                    <p style="margin-left: 60px;">HtmlCss - Link Tree Fian</p>
+                    <p style="margin-left: 60px;">HtmlCss - Cek Followers Instagram</p>
+    
+                    <h3 style="margin-left: 40px;">Java</h3>
+                    <p style="margin-left: 60px;">Admin Seblak Prasmanan</p>
+                    <p style="margin-left: 60px;">Admin Inventory Apotik</p>
+    
+                </div>
+                <div id="sosmed" class="sosmed">
+                    <h1 style="margin-bottom: 10px;">My Social Media:</h1>
+    
+                    <div class="logos">
+                        <a target="_blank" href="https://www.instagram.com/fianfi_"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.tiktok.com/@fianfi_"><i class="fab fa-tiktok"></i></a>
+                        <a target="_blank" href="https://www.threads.net/@fianfi_"><i class="fab fa-threads"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/profile.php?id=61553704868937"><i class="fab fa-facebook-f"></i></a>
+                        <a target="_blank" href="http://teer.id/KiitoKun"><i class="fas fa-hand-holding-heart"></i></a>
+                        <a id="whatsappbtn" href="#sosmed" class="comingsoon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="lfoot">Portofolio By Fadrik Muhammad</div>
+        <div class="rfoot">LastUpdate 12-05-2025</div>
+    </div>
+
+    <!-- Overlay Coming Soon -->
+    <div id="comingSoonCard" class="coming-soon-card">
+        <h2>Coming Soon! 🚀</h2>
+        <p>Fitur ini sedang dalam pengembangan 🚧</p>
+        <div class="progress-bar"></div>
+    </div>
+
+</body>
+
+<script>
+    const tombol = document.querySelector('.tombol');
+    const menu = document.querySelector('ul.menu');
+    
+    tombol.addEventListener('click', () => {
+      menu.classList.toggle('aktif'); // Tambah/hapus class "aktif"
+    });
+    tombol.addEventListener('mouseenter', () => {
+      menu.classList.toggle('aktif'); // Tambah/hapus class "aktif"
+      tombol.classList.toggle('aktif'); // Tambah/hapus class "aktif"
+    });
+    menu.addEventListener('mouseleave', () => {
+      menu.classList.toggle('aktif'); // Tambah/hapus class "aktif"
+      tombol.classList.toggle('aktif'); // Tambah/hapus class "aktif"
+    });
+
+
+    const comingSoonBtn = document.getElementById('whatsappbtn');
+    const comingSoonCard = document.getElementById('comingSoonCard');
+    const progressBar = document.querySelector('.progress-bar');
+
+    comingSoonBtn.addEventListener('click', () => {
+    // Munculkan kartu
+    comingSoonCard.classList.add('active');
+    progressBar.style.width = '100%';
+    
+    // Auto close setelah 3 detik
+    setTimeout(() => {
+        comingSoonCard.classList.remove('active');
+        progressBar.style.width = '0%';
+    }, 3000);
+    });
+</script>
+
+</html>
