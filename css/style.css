@@ -55,6 +55,9 @@ nav.scrolled {
     .menu-btn{
         display: none;
     }
+    .menu-link{
+        display: none;
+    }
 }
 
 .nav-btn{
