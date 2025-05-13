@@ -5,14 +5,10 @@ const menu = document.querySelector('.menu-link');
 tombol.addEventListener('click', () => {
   menu.classList.toggle('aktif'); // Tambah/hapus class "aktif"
 });
-tombol.addEventListener('mouseenter', () => {
-  menu.classList.toggle('aktif'); // Tambah/hapus class "aktif"
-  tombol.classList.toggle('aktif'); // Tambah/hapus class "aktif"
-});
 menu.addEventListener('mouseleave', () => {
   menu.classList.toggle('aktif'); // Tambah/hapus class "aktif"
-  tombol.classList.toggle('aktif'); // Tambah/hapus class "aktif"
 });
+
 
 
 // DarkTheme Button
