@@ -53,3 +53,16 @@ setTimeout(() => { // Auto close setelah 3 detik
     progressBar.style.width = '0%';
 }, 3000);
 });
+
+
+// scrolled banner
+window.addEventListener('scroll', function() {
+  const banner = document.querySelector('.banner');
+  const navbar = document.querySelector('nav');
+  const bannerBottom = banner.getBoundingClientRect().bottom;
+  if (bannerBottom <= 0) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
