@@ -159,6 +159,12 @@ nav{
         margin: 0 20px;
     }
 
+    .title{
+        text-align: left;
+        margin: 0 20px;
+        font-size: 4.6vw;
+    }
+
     prof-cont {
         font-size: 10px;
     }
