@@ -6,10 +6,26 @@
 
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: beige;
+}
+
+body.light-mode{
+    color: #0D1B2A;
+    background-color: #e0e1dd;
+    .sun-btn{
+        display: none;
+    }
+}
+
+body.dark-mode{
+    color: #e0e1dd;
+    background-color: #0D1B2A;
+    .moon-btn{
+        display: none;
+    }
 }
 
 .head-container{
+    color: #e0e1dd;
     background: url(
     ../img/wllppProfile.JPG
     );
@@ -28,49 +44,65 @@ nav{
     align-items: center;
 }
 
+.nav-btn{
+    display: flex;
+    flex-direction: row;
+    right: 0;
+    width: 60px;
+    top: 40px;
+    left: auto;
+    right: 0;
+    justify-content: space-between;
+}
 
 .title{
     text-align: left;
     margin: 0 20px;
+    font-size: 20px;
 }
 
-div.menu{
+.theme-btn{
+    margin: 8px 0px 0px 0px;
+}
+
+.menu{
     text-align: right;
-    margin: 0 20px;
+    margin: 0 0px;
+    font-size: 20px;
+    padding: 0 10px;
 }
 
-ul.menu {
-  display: none; /* Sembunyikan menu di mobile */
-  flex-direction: column;
-  position: absolute;
-  top: 40px;
-  left: auto;
-  right: 0;
-  background: rgba(0, 0, 0, 0.162);
-  padding: 5px;
-  text-align: left;
+.menu-link {
+    display: none; /* Sembunyikan menu di mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    left: auto;
+    right: 0;
+    background: rgba(0, 0, 0, 0.162);
+    padding: 5px;
+    text-align: left;
 }
 
-ul.menu > a{
+.menu-link > a{
     text-decoration: none;
-    color: beige;
-    font-size: 15px;
-    font-family: 'Courier New', Courier, monospace;
+    color: #e0e1dd;
 }
 
-.menu.aktif { /* Class tambahan untuk toggle JS */
-  display: flex; /* Munculkan saat tombol diklik */
+.menu-link.aktif { /* Class tambahan untuk toggle JS */
+    display: flex; /* Munculkan saat tombol diklik */
 }
 
-.tombol {
-  display: block; /* Tampilkan tombol di mobile */
+.menu-btn {
+    display: block;
+    font-size: 25px; /* Tampilkan tombol di mobile */
 }
 
-.tombol.aktif {
+.menu-btn.aktif {
   display: none;
 }
 
-.tombol:hover{
+.menu-btn:hover{
     cursor: pointer;
 }
 
@@ -105,9 +137,9 @@ ul.menu > a{
 
 .projBtn > a{
     text-decoration: none;
-    border: 3px solid beige;
+    border: 3px solid #e0e1dd;
     border-radius: 20px;
-    color: beige;
+    color: #e0e1dd;
     padding: 10px 50px;
 }
 
@@ -147,8 +179,6 @@ ul.menu > a{
 
 .content{
     height: auto;
-    background: white;
-    color: rgb(46, 46, 46);
     padding: 20px 0;
 }
 
@@ -169,7 +199,7 @@ ul.menu > a{
 
 .logos > a {
     text-decoration: none;
-    color: rgb(46, 46, 46);
+    color: currentColor;
     font-size: 70px;
     padding: 10px 20px;
 }
@@ -183,7 +213,6 @@ ul.menu > a{
 
     .logos > a {
     text-decoration: none;
-    color: rgb(46, 46, 46);
     font-size: 50px;
     padding: 10px;
     }
@@ -193,8 +222,8 @@ ul.menu > a{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: bisque;
-    background-color: rgb(46, 46, 46);
+    color: #e0e1dd;
+    background-color: #0D1B2A;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -219,8 +248,8 @@ ul.menu > a{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.8);
-  background: beige;
-  color: rgb(46, 46, 46);
+  background: #e0e1dd;
+  color: #0D1B2A;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
